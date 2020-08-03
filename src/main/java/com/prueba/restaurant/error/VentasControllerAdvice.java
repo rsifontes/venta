@@ -39,13 +39,5 @@ public class VentasControllerAdvice extends ResponseEntityExceptionHandler {
                 ex, apiError, headers, HttpStatus.BAD_REQUEST, request);
     }
 
-    @ExceptionHandler(ExpiredJwtException.class)
-    public final ResponseEntity<Object> handleUserNotFoundException(ExpiredJwtException ex, WebRequest request) {
-        List<String> details = new ArrayList<>();
-        details.add(ex.getLocalizedMessage());
-        System.out.println("entre!");
-        ApiError apiError =
-                new ApiError(HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED.getReasonPhrase(), details);
-        return new ResponseEntity<>(apiError, HttpStatus.UNAUTHORIZED);
-    }
+
 }
