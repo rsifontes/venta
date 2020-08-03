@@ -5,6 +5,7 @@ import com.prueba.restaurant.venta.domain.Venta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.List;
@@ -29,7 +30,7 @@ public class VentaJmsMock {
 
     public List<Venta> obtenerVentaDia(){
          colaJMSFalsa.poll();
-         return ventaRepo.findAllByfechaVenta(new Date());
+         return ventaRepo.findAllByfechaVenta(LocalDate.now());
     }
 
 

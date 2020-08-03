@@ -9,5 +9,5 @@ public interface VentaService {
 
 
     public List<Venta> obtenerVentasDía();
-    public ResponseEntity<Void> crearVenta(Venta venta);
+    public Venta crearVenta(Venta venta);
 }

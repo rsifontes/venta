@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 @Service
 public class JmsVentaService implements VentaService {
-
 
 
     @Autowired
@@ -28,10 +28,9 @@ public class JmsVentaService implements VentaService {
 
     }
 
-    public ResponseEntity<Void> crearVenta(Venta venta) {
-        venta.setFechaVenta(new Date());
-        ventaRepo.save(venta);
-        return ResponseEntity.ok().build();
+    public Venta crearVenta(Venta venta) {
+        venta.setFechaVenta(LocalDate.now());
+        return ventaRepo.save(venta);
     }
 
 }

@@ -1,6 +1,9 @@
 package com.prueba.restaurant.venta.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +14,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -26,8 +30,9 @@ public class Venta implements Serializable {
     @NotNull
     private String nombreComprador;
 
-    @Temporal(TemporalType.DATE)
-    private Date fechaVenta;
+    @Column(columnDefinition = "DATE")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private LocalDate fechaVenta;
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL)
@@ -49,11 +54,11 @@ public class Venta implements Serializable {
         this.nombreComprador = nombreComprador;
     }
 
-    public Date getFechaVenta() {
+    public LocalDate getFechaVenta() {
         return fechaVenta;
     }
 
-    public void setFechaVenta(Date fechaVenta) {
+    public void setFechaVenta(LocalDate fechaVenta) {
         this.fechaVenta = fechaVenta;
     }
 
