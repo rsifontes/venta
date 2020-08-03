@@ -13,6 +13,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -31,19 +32,22 @@ class JmsVentaServiceTest {
 
     @Test
     void obtenerVentasDía() {
-
+        List<Venta> listaVenta = new ArrayList<>();
+        listaVenta.add(ventaBuilder(LocalDate.now()));
+        when(ventaJmsMock.obtenerVentaDia()).thenReturn(listaVenta);
+        Assertions.assertFalse(jmsVentaService.obtenerVentasDía().isEmpty());
     }
 
     @Test
     void crearVenta() {
-        Venta venta = ventaBuilder();
+        Venta venta = ventaBuilder(null);
         when(ventaRepo.save(any(Venta.class))).thenReturn(venta);
         Assertions.assertEquals(LocalDate.now(),jmsVentaService.crearVenta(venta).getFechaVenta());
     }
 
-    private Venta ventaBuilder(){
+    private Venta ventaBuilder(LocalDate localDate){
         Venta venta = new Venta();
-        venta.setFechaVenta(null);
+        venta.setFechaVenta(localDate);
         venta.setNombreComprador("Comprador");
         venta.setNombreVendedor("Vendedor");
         venta.setProductos(new ArrayList<>());
@@ -52,12 +56,4 @@ class JmsVentaServiceTest {
 
 
 
-    private Producto productoBuilder(){
-        Producto producto = new Producto();
-        producto.setCantidad(1);
-        producto.setDescuento(BigDecimal.ZERO);
-        producto.setNombreProducto("Nombre");
-        producto.setPrecio(new BigDecimal(12000));
-        return producto;
-    }
 }
