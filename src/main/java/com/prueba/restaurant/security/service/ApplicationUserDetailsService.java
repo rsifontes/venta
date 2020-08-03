@@ -18,12 +18,12 @@ public class ApplicationUserDetailsService implements UserDetailsService{
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
         ApplicationUser applicationUser = buscarApplicationUserPorUsername(username);
         return generarUserDetail(applicationUser);
     }
 
-    private ApplicationUser buscarApplicationUserPorUsername( String username) throws UsernameNotFoundException{
+    private ApplicationUser buscarApplicationUserPorUsername( String username) {
         ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
         if (applicationUser == null) {
             throw new UsernameNotFoundException(username);
@@ -31,7 +31,7 @@ public class ApplicationUserDetailsService implements UserDetailsService{
         return applicationUser;
     }
 
-    private UserDetails generarUserDetail(ApplicationUser applicationUser) throws UsernameNotFoundException{
+    private UserDetails generarUserDetail(ApplicationUser applicationUser) {
         return new User(applicationUser.getUsername(), applicationUser.getPassword(), Collections.emptyList());
     }
 

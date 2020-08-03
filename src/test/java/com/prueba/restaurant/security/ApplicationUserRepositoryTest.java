@@ -18,7 +18,7 @@ class ApplicationUserRepositoryTest {
     @Test
     void findByUsername() {
         ApplicationUser applicationUser = applicationUserRepository.findByUsername("user");
-        assertEquals(applicationUser.getUsername(),"user");
+        assertEquals("user",applicationUser.getUsername());
     }
 
     @Test

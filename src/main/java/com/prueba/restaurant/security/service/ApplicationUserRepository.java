@@ -28,6 +28,6 @@ public class ApplicationUserRepository {
         }
 
         return null;
-    };
+    }
 
 }
