@@ -5,11 +5,9 @@ import com.prueba.restaurant.venta.domain.Venta;
 import com.prueba.restaurant.venta.jms.VentaJmsMock;
 import com.prueba.restaurant.venta.service.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Service

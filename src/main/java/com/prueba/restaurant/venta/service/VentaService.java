@@ -1,7 +1,6 @@
 package com.prueba.restaurant.venta.service;
 
 import com.prueba.restaurant.venta.domain.Venta;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
