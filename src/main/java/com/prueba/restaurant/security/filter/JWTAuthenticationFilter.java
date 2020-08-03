@@ -1,7 +1,7 @@
-package com.prueba.venta.security.filter;
+package com.prueba.restaurant.security.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.prueba.venta.security.domain.ApplicationUser;
+import com.prueba.restaurant.security.domain.ApplicationUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -20,8 +20,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static com.prueba.venta.security.SecurityConstants.EXPIRATION_TIME;
-import static com.prueba.venta.security.SecurityConstants.KEY;
+import static com.prueba.restaurant.security.SecurityConstants.EXPIRATION_TIME;
+import static com.prueba.restaurant.security.SecurityConstants.KEY;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 

@@ -1,6 +1,6 @@
-package com.prueba.venta.security.service;
+package com.prueba.restaurant.security.service;
 
-import com.prueba.venta.security.domain.ApplicationUser;
+import com.prueba.restaurant.security.domain.ApplicationUser;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

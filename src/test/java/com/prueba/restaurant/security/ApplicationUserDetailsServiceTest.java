@@ -1,8 +1,8 @@
-package com.prueba.venta.security;
+package com.prueba.restaurant.security;
 
-import com.prueba.venta.security.domain.ApplicationUser;
-import com.prueba.venta.security.service.ApplicationUserDetailsService;
-import com.prueba.venta.security.service.ApplicationUserRepository;
+import com.prueba.restaurant.security.domain.ApplicationUser;
+import com.prueba.restaurant.security.service.ApplicationUserDetailsService;
+import com.prueba.restaurant.security.service.ApplicationUserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

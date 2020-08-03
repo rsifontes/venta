@@ -1,4 +1,4 @@
-package com.prueba.venta.security.filter;
+package com.prueba.restaurant.security.filter;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.prueba.venta.security.SecurityConstants.HEADER_NAME;
-import static com.prueba.venta.security.SecurityConstants.KEY;
+import static com.prueba.restaurant.security.SecurityConstants.HEADER_NAME;
+import static com.prueba.restaurant.security.SecurityConstants.KEY;
 
 public class AuthorizationFilter extends BasicAuthenticationFilter {
 

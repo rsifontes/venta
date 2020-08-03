@@ -1,4 +1,4 @@
-package com.prueba.venta.security.domain;
+package com.prueba.restaurant.security.domain;
 
 public class ApplicationUser {
 

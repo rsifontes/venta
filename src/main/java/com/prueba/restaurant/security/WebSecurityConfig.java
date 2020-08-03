@@ -1,8 +1,8 @@
-package com.prueba.venta.security;
+package com.prueba.restaurant.security;
 
-import com.prueba.venta.security.filter.AuthorizationFilter;
-import com.prueba.venta.security.filter.JWTAuthenticationFilter;
-import com.prueba.venta.security.service.ApplicationUserDetailsService;
+import com.prueba.restaurant.security.filter.AuthorizationFilter;
+import com.prueba.restaurant.security.filter.JWTAuthenticationFilter;
+import com.prueba.restaurant.security.service.ApplicationUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

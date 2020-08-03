@@ -1,4 +1,4 @@
-package com.prueba.venta.login;
+package com.prueba.restaurant.login;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

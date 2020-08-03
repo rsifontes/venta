@@ -1,4 +1,4 @@
-package com.prueba.venta.security;
+package com.prueba.restaurant.security;
 
 public class SecurityConstants {
     public static final String KEY = "SECRET";
