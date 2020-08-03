@@ -1,4 +1,4 @@
-package com.prueba.venta.security;
+package com.prueba.venta.security.service;
 
 import com.prueba.venta.security.domain.ApplicationUser;
 import org.springframework.beans.factory.annotation.Value;

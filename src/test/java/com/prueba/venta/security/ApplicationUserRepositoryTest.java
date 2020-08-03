@@ -1,6 +1,7 @@
 package com.prueba.venta.security;
 
 import com.prueba.venta.security.domain.ApplicationUser;
+import com.prueba.venta.security.service.ApplicationUserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
