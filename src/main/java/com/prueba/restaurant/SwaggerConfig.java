@@ -46,7 +46,7 @@ public class SwaggerConfig {
                         .modelRef(new ModelRef("string"))
                         .parameterType("header")
                         .description("token jwt para la venta se obtiene al loguear")
-                        .required(true)
+                        .required(false)
                         .build()))
                 .securityContexts(Lists.newArrayList(securityContext()))
                 .securitySchemes(Arrays.asList(apiKey()));
