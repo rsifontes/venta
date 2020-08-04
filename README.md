@@ -1,5 +1,8 @@
 # venta
 
+#### Ejecutar Proyecto
+`mvn spring-boot:run`
+
 
 #### Ingreso
 
